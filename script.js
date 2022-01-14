@@ -1,3 +1,4 @@
+var Interval
 window.start = function() {
   let x = 0;
   let y = 0;
@@ -5,7 +6,7 @@ window.start = function() {
     x = event.pageX;
     y = event.pageY;
   })
-  let Interval = setInterval(() => {
+  Interval = setInterval(() => {
     var element = document.elementFromPoint(x, y)
     element.click()
   })
