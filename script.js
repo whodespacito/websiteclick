@@ -1,4 +1,4 @@
-var Interval
+
 window.start = function() {
   let x = 0;
   let y = 0;
@@ -6,11 +6,11 @@ window.start = function() {
     x = event.pageX;
     y = event.pageY;
   })
-  Interval = setInterval(() => {
+  window.interval = setInterval(() => {
     var element = document.elementFromPoint(x, y)
     element.click()
   })
 }
 window.stop = function() {
-  clearInterval(Interval)
+  clearInterval(window.interval)
 }
